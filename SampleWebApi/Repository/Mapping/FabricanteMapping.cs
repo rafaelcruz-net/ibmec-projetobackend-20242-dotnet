@@ -15,6 +15,8 @@ namespace SampleWebApi.Repository.Mapping
             builder.Property(x => x.Nome).IsRequired().HasMaxLength(128);
             builder.Property(x => x.DataFundacao).IsRequired();
 
+            builder.Property(x => x.Descricao).HasMaxLength(500);
+
             builder.HasMany(x => x.Veiculos).WithOne(x => x.Fabricante);
 
         }
