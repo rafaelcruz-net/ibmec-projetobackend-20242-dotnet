@@ -49,9 +49,6 @@ namespace SampleWebApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFabricante(Guid id, Fabricante fabricante)
         {
-            if (ModelState.IsValid == false)
-                return BadRequest();
-
             if (id != fabricante.Id)
             {
                 return BadRequest();
@@ -81,9 +78,6 @@ namespace SampleWebApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Fabricante>> PostFabricante(Fabricante fabricante)
         {
-            if (ModelState.IsValid == false)
-                return BadRequest();
-
             await _fabricantesRepository.SaveAsync(fabricante);
 
             return CreatedAtAction("GetFabricante", new { id = fabricante.Id }, fabricante);

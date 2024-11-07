@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace SampleWebApi.Repository
 {
-    public abstract class UnitOfWork<T> : IUnitOfWork<T> 
+    public class UnitOfWork<T> : IUnitOfWork<T> 
                     where T : class
     {
         private SampleContext Context { get; set; }
