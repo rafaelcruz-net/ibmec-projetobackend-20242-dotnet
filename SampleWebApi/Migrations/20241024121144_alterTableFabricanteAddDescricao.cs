@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System.Diagnostics.CodeAnalysis;
 
 #nullable disable
 
 namespace SampleWebApi.Migrations
 {
-    /// <inheritdoc />
+    
+    [ExcludeFromCodeCoverage]
     public partial class alterTableFabricanteAddDescricao : Migration
     {
         /// <inheritdoc />
